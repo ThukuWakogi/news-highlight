@@ -1,3 +1,5 @@
 virtual
 start.ps1
 *.pyc
+.vscode
+instance
