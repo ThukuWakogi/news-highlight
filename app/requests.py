@@ -1,5 +1,6 @@
 from newsapi import NewsApiClient
 from .models.source import Source
+from .models.article import Article
 
 #get api key
 api_key = None
@@ -7,6 +8,9 @@ api_key = None
 def configure_request(app):
   '''
   initial configuration for important variables
+
+  args:
+    app instance
   '''
 
   global api_key
@@ -15,6 +19,9 @@ def configure_request(app):
 def get_sources():
   '''
   function that gets sources from api
+
+  returns:
+    array of sources
   '''
 
   api = NewsApiClient(api_key=api_key)
@@ -35,3 +42,33 @@ def get_sources():
     )
 
   return news_sources
+
+def get_articles_from_source(source):
+  '''
+  function to get articles of specifies source from api
+
+  args:
+    source: the source from which the articles are to be retrieved
+  
+  returns:
+    array of articles in source
+  '''
+
+  api = NewsApiClient(api_key=api_key)
+  source_articles = api.get_everything(sources=source)
+  articles = []
+
+  for article in source_articles['articles']:
+    articles.append(
+      Article(
+        article.get('author'),
+        article.get('title'),
+        article.get('description'),
+        article.get('url'),
+        article.get('urlToImage'),
+        article.get('publishedAt'),
+        article.get('content')
+      )
+    )
+  
+  return articles
