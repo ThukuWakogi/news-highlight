@@ -63,3 +63,12 @@
   height: 300px;
   object-fit: cover;
 }
+
+.cstm-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.cstm-content {
+  margin-top: 30%;
+}
