@@ -1,7 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Lora&display=swap');
+
 .cstm-navbar a {
   color: #000;
 }
 
+.cstm-navbar {
+  background-color: #fff;
+}
+
 .cstm-navbar-button span {
   background-color: #000;
+}
+
+.cstm-source-card {
+  margin: 4px;
+  height: max-content;
+}
+
+.cstm-navbar-brand {
+  font-family: 'Abril Fatface', cursive;
+}
+
+.cstm-badges {
+  display: flex;
+  flex-direction: row;
+}
+
+.cstm-badges p {
+  margin: 4px;
+}
+
+@media only screen and (max-width: 576px) {
+  .cstm-source-card {
+    padding-bottom: 16px;
+    padding-top: 8px;
+    border-bottom: 1px solid black;
+  }
+
+  .cstm-source-card:last-child {
+    border-bottom: none;
+  }
+}
+
+.cstm-no-margin {
+  margin: 0px;
 }

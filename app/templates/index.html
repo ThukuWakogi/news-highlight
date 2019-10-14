@@ -1,5 +1,25 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>Hllloooo</h1>
+  <div class="container">
+    <div class="row justify-content-center">
+      {% for source in news_sources %}
+        <div class="col-xs-12 col-sm-6 col-md-3 cstm-source-card">
+          <div>
+            <h3>{{ source.name }}</h3>
+            <p class="cstm-no-margin">{{ source.description }}</p>
+          </div>
+          <div class="cstm-badges">
+            <p><span class="badge badge-dark">{{ source.category }}</span></p>
+            <p><span class="badge badge-dark">{{ source.language }}</span></p>
+            <p><span class="badge badge-dark">{{ source.country }}</span></p>
+          </div>
+          <div class="cstm-actions">
+            <a href="{{ source.url }}"><button class="btn">visit page</button></a>
+            <a href="/"><button class="btn">view news</button></a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
 {% endblock %}

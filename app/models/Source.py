@@ -5,7 +5,7 @@ class Source():
 
   def __init__(self, id, name, description, url, category, language, country):
     '''
-    requires for values upon object instanstiation
+    requires for values upon object instantiation
     '''
 
     self.id = id

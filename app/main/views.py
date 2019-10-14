@@ -10,6 +10,5 @@ def index():
   '''
 
   news_sources = get_sources()
-  print(news_sources)
 
-  return render_template('index.html')
+  return render_template('index.html', news_sources=news_sources)
