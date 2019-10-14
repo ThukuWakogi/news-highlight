@@ -13,7 +13,7 @@
 }
 
 .cstm-source-card {
-  margin: 4px;
+  margin: 4px 4px 20px 4px;
   height: max-content;
 }
 
@@ -44,4 +44,22 @@
 
 .cstm-no-margin {
   margin: 0px;
+}
+
+.cstm-card-img-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-image: linear-gradient(transparent, #000000e0);
+}
+
+.cstm-card {
+  border: none;
+  border-radius: 0px;
+  width: 100%;
+}
+
+.cstm-card > img {
+  height: 300px;
+  object-fit: cover;
 }
