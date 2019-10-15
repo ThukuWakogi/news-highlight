@@ -54,3 +54,14 @@ a copy of the source code can be gotten through:
 * Install packages. `pip install -r requirements.txt`
 * set `NEWS_API_KEY` environment variable `export NEWS_API_KEY=<your news api key here>`
 * start the server `python3.x manage.py server`
+
+## Development tools
+* [Python](https://www.python.org/)
+* [Flask](https://palletsprojects.com/p/flask/)
+* [Bootstrap](https://getbootstrap.com/)
+* [Google fonts](https://fonts.google.com/)
+* HTML
+* CSS
+
+## license
+This project is under the MIT license. click [here](https://github.com/ThukuWakogi/news-highlight/blob/master/LICENSE) for more details
