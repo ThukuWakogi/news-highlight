@@ -1,6 +1,6 @@
 from newsapi import NewsApiClient
-from .models.article import Article
 from .models.source import Source
+from .models.article import Article
 
 #get api key
 api_key = None
